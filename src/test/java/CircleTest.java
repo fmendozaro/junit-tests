@@ -5,36 +5,36 @@ import static junit.framework.TestCase.*;
 
 public class CircleTest {
 
-    private Student student;
+    private Student studentWithoutGrades;
+    private Student studentWithGrades;
 
     @Before
     public void setUp(){
-        student = new Student("Fer");
+        studentWithoutGrades = new Student("Fer");
+        studentWithGrades = new Student("Jane");
+        studentWithGrades.addGrade(100);
+        studentWithGrades.addGrade(80);
     }
 
     @Test
     public void testGetName(){
-        assertSame(student.getName(), "Fer");
+        assertSame(studentWithoutGrades.getName(), "Fer");
     }
 
     @Test
     public void testAddGrade(){
-        student.addGrade(100);
-        assertTrue(student.getGrades().get(0) == 100);
+        assertTrue(studentWithGrades.getGrades().get(0) == 100);
     }
 
     @Test
     public void testGetGrades(){
-        student.addGrade(90);
-        assertFalse(student.getGrades().size() == 0);
-        assertNotNull(student.getGrades().get(0));
+        assertFalse(studentWithGrades.getGrades().size() == 0);
+        assertNotNull(studentWithGrades.getGrades().get(0));
     }
 
     @Test
     public void testGetAverage(){
-        student.addGrade(100);
-        student.addGrade(80);
-        assertEquals(student.getGradeAverage(), 90.0);
+        assertEquals(studentWithGrades.getGradeAverage(), 90.0);
     }
 
 }

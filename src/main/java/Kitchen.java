@@ -9,23 +9,23 @@ public class Kitchen {
     }
 
     public boolean isEmpty(){
-        return tortillas.length == 0;
+        return this.size() == 0;
     }
 
     public void add(String tortilla){
-        String[] copy = Arrays.copyOf(tortillas, tortillas.length+1);
-        copy[tortillas.length] = tortilla;
+        String[] copy = Arrays.copyOf(tortillas, this.size()+1);
+        copy[this.size()] = tortilla;
         tortillas = copy;
     }
 
     public void pop(){
-        tortillas[tortillas.length-1] = null;
-        String[] copy = Arrays.copyOf(tortillas, tortillas.length-1);
+        tortillas[this.size()-1] = null;
+        String[] copy = Arrays.copyOf(tortillas, this.size()-1);
         tortillas = copy;
     }
 
     public boolean contains(String tortilla){
-        for (int i = 0; i < tortillas.length; i++){
+        for (int i = 0; i < this.size(); i++){
             if(tortillas[i].equals(tortilla))
                 return true;
         }
@@ -33,9 +33,12 @@ public class Kitchen {
     }
     
     public void printAll(){
-        for (int i = tortillas.length-1; i >= 0; i--){
+        for (int i = this.size()-1; i >= 0; i--){
             System.out.println("tortillas["+i+"] " + tortillas[i]);
         }
     }
 
+    public int size() {
+        return tortillas.length;
+    }
 }

@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Kitchen {
 
-    String[] tortillas;
+    private String[] tortillas;
 
     public Kitchen(){
         this.tortillas = new String[0];

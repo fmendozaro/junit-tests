@@ -45,4 +45,20 @@ public class KitchenTest {
         assertFalse(kitchenWithOne.isEmpty());
         assertFalse(kitchenWithMany.isEmpty());
     }
+
+    @Test
+    public void testRemove(){
+        kitchenWithOne.pop();
+        assertSame(0, kitchenWithOne.size());
+        kitchenWithMany.pop();
+        assertSame(3, kitchenWithMany.size());
+    }
+
+    @Test
+    public void testContains(){
+        assertFalse(emptyKitchen.contains("blue corn"));
+        assertTrue(kitchenWithOne.contains("yellow corn"));
+        assertTrue(kitchenWithMany.contains("white corn"));
+    }
+
 }

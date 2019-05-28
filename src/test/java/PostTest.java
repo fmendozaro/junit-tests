@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class PostTest {
@@ -12,5 +14,12 @@ public class PostTest {
         Post savedPost = post.save(post);
         assertNotNull(savedPost);
         assertEquals("ps4", savedPost.title);
+    }
+
+    @Test
+    public void testFindAll(){
+        Post post = new Post("ps4", "for sale", 1L);
+        ArrayList<Post> posts = post.findAll();
+        assertNotNull(posts);
     }
 }

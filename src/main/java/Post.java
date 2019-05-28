@@ -18,4 +18,8 @@ public class Post {
         posts.add(post);
         return posts.get(posts.size()-1);
     }
+
+    public ArrayList<Post> findAll() {
+        return null;
+    }
 }

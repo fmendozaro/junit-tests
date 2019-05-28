@@ -11,5 +11,6 @@ public class PostTest {
         assertEquals("ps4", post.title);
         Post savedPost = post.save(post);
         assertNotNull(savedPost);
+        assertEquals("ps4", savedPost.title);
     }
 }

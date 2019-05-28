@@ -15,6 +15,7 @@ public class Post {
     }
 
     public Post save(Post post) {
-        return null;
+        posts.add(post);
+        return posts.get(posts.size()-1);
     }
 }

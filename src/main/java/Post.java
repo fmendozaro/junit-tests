@@ -20,6 +20,6 @@ public class Post {
     }
 
     public ArrayList<Post> findAll() {
-        return null;
+        return this.posts;
     }
 }

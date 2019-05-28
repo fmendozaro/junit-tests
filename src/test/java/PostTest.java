@@ -19,7 +19,9 @@ public class PostTest {
     @Test
     public void testFindAll(){
         Post post = new Post("ps4", "for sale", 1L);
+        Post savedPost = post.save(post);
         ArrayList<Post> posts = post.findAll();
         assertNotNull(posts);
+        assertEquals("for sale", posts.get(0).content);
     }
 }

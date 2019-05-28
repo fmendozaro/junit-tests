@@ -29,19 +29,19 @@ We will use the JUnit 4 dependency thru Maven, so just start by [creating a Mave
 
 ### Exercise 
 
-We will follow the best practices of TDD and we will build the tests first and write production code once we see the test fail first. We will create a `Post` class for a blog application, these are the requirements for that feature:
+We will follow the best practices of TDD and we will build the tests first and write production code once we see the test fail first. We will create a `Blog` class for a blog application, these are the requirements for that feature:
 
-The app should be able to create posts, each post should contain a `userId, title, content`.
+The app should be able to create posts, each post should contain a `userId, title and content`.
  
 - `userId` should be a `long` number used to represent a number for a "user" in our application.
 - `title` is a `String` that holds the title of the blog post.
 - `content` is a `String` that contains the whole post of the blog post.
 
-1. Create a `PostTest.java` file inside of `src/test/java` and remember to write the test before the actual code.
-1. We will simulate the `C(reate) R(ead)` from the `CRUD` functionality in our blog application so your should be able to test and create the following methods:
-- `save()` takes a Post as an argument and adds it to an ArrayList.
-- `findAll()` takes no arguments and returns the list of Post elements.
-- `findOne` takes in an id as an argument and returns the specific Post with the desired index from the list; 
+1. Create a `BlogTest.java` file inside of `src/test/java` and remember to write the test before the actual code. We will simulate the `C(reate) R(ead)` from the `CRUD` functionality in our blog application so your should be able to test and create the following methods:
+- A constructor with all 3 fields and each property has it's own getter.
+- `savePost()` takes a Post as an argument and adds it to an ArrayList, it returns the saved Post.
+- `findAllPosts()` takes no arguments and returns the ArrayList of `Post` elements.
+- `findPost` takes in an id as an argument and returns the specific Post with the desired index from the ArrayList.
 
 #### Bonus
 

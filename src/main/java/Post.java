@@ -22,4 +22,8 @@ public class Post {
     public ArrayList<Post> findAll() {
         return this.posts;
     }
+
+    public Post findOne(int index) {
+        return posts.get(index-1);
+    }
 }

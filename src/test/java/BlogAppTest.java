@@ -9,6 +9,7 @@ public class BlogAppTest {
         Post post = new Post("title", "content", 1);
         assertNotNull(post);
         assertEquals("title", post.getTitle());
+        assertEquals("content", post.getContent());
     }
 
 }

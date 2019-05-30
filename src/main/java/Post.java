@@ -1,9 +1,11 @@
 public class Post {
 
     private String title;
+    private String content;
 
     public Post(String title, String content, int i) {
         this.title = title;
+        this.content = content;
     }
 
     public String getTitle() {
@@ -11,6 +13,6 @@ public class Post {
     }
 
     public String getContent() {
-        return "";
+        return this.content;
     }
 }
